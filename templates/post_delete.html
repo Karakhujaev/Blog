@@ -1,0 +1,71 @@
+{% load static %}  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/delete.css' %}">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style/control1.css' %}"> 
+    <style>
+        input{
+            color: white;
+            padding: 15px 80px;
+            font-family: sans-serif;
+            background-color: red;
+            border: 1px solid red;
+            border-radius: 5px;
+            font-family: sans-serif;
+            font-weight: 800;
+        }
+
+        input:hover{
+            cursor: pointer;
+            background-color: black;
+            color: white;
+            transition-duration: 1s;
+        }
+
+        p{
+            width: 500px;
+            line-height: 2;
+            margin: 20px 0px;
+            font-size: 25px;
+
+        }
+    </style>
+</head>
+<body>
+    <section class="body">
+        <header>
+            <ul class="logo">
+                <a href="{% url 'home' %}">
+                    <ul>
+                        <li><img src="{% static 'images/pages_photos/logo.png' %}" alt=""></li>
+                        <li>musaa.com</li>
+                    </ul>
+                </a>
+            </ul>
+
+            <nav>
+                <a href="{% url 'tech' %}">#tech</a> 
+                <a href="{% url 'ai' %}">#ai</a> 
+                <a href="{% url 'software' %}">#software</a> 
+                <a href="{% url 'crypto' %}">#crypto</a> 
+                <a href="{% url 'control' %}">Control</a>
+            </nav>
+
+            <a href=""><img id="search" src="{% static 'images/icons/search.svg' %}" alt=""></a>
+        </header>
+
+        <section class="banner">
+            <form action="" method="post">{% csrf_token %}
+                <p>{{post.title}}</p>
+                <input type="submit" value="Delete">
+            </form>
+        </section>
+    </section>
+</body>
+</html>
+    

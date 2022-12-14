@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <!-- Bootstrapt Link -->
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- Title -->
+    <title>Home</title>
+    <!-- CSS File -->
+    <link rel="stylesheet" href="{% static 'style/control1.css' %}"> 
+</head>
+<body>
+    <section class="body">
+        <header>
+            <ul class="logo">
+                <a href="{% url 'home' %}">
+                    <ul>
+                        <li><img src="{% static 'images/pages_photos/logo.png' %}" alt=""></li>
+                        <li>musaa.com</li>
+                    </ul>
+                </a>
+            </ul>
+
+            <nav>
+                <a href="{% url 'tech' %}">#tech</a> 
+                <a href="{% url 'ai' %}">#ai</a> 
+                <a href="{% url 'software' %}">#software</a> 
+                <a href="{% url 'crypto' %}">#crypto</a> 
+                <a href="{% url 'post_new' %}"><button>Create</button></a>
+
+            </nav>
+            <a href=""><img id="search" src="{% static 'images/icons/search.svg' %}" alt=""></a>
+        </header>
+
+        <section class="banner">
+                     <div class="card_banner">
+                        {% for post in object_list %}
+                                <a href="{% url 'post_control' post.pk %}">
+                                    <div class="card" >
+                                        <img src={{post.image.url}} alt="" class="card_img">
+                                        <div class="card_index">
+                                            <p>{{post.category}}  <span class="point">•</span> <span class="date">{{post.date}} </span></p>
+                                            <h1 class="title">{{post.title}} </h1>
+                                        </div>  
+                                    </div>
+                                </a>
+                        {% endfor %}
+                    </div>
+            </section>
+        </section>
+
+    <footer>
+            <div class="footer_about">
+                <h1>musaa.com</h1>
+                <p>Posts aboout tech world.</p>
+            </div>
+
+            <div class="social_tech">
+                <ul>
+                    <li><a href="https://www.youtube.com/channel/UC8lSuQPyJhZOG6_OGbdn0zA" target="_blank"><img src="{% static 'images/icons/youtube.svg' %}" alt=""></a></li>
+                    <li><a href="https://www.linkedin.com/in/musoxon-karakhujayev-b1595123b/" target="_blank"><img src="{% static 'images/icons/linkedin.svg' %}" alt=""></a></li>
+                    <li><a href="https://github.com/Karakhujayev" target="_blank"><img src="{% static 'images/icons/github.svg' %}" alt=""></a></li>
+                </ul>
+            </div>
+
+            <div class="social_media">
+                <ul>
+                    <li><a  href="https://www.instagram.com/thisismusakhan/" target="_blank"><img src="{% static 'images/icons/instagram.svg' %}" alt=""></a></li>
+                    <li><a href="https://twitter.com/Musoxon7179" target="_blank"><img src="{% static 'images/icons/twitter.svg' %}" alt=""></a></li>
+                    <li><a href="https://t.me/thisismusokhon" target="_blank"><img src="{% static 'images/icons/telegram.svg' %}" alt=""></a></li>
+                </ul>
+            </div>
+    </footer>
+
+    <!-- Bootstrapt Java Script -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

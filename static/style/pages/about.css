@@ -1,0 +1,123 @@
+*{
+    text-decoration: none;
+}
+
+body{
+    background-color: #f5f5f5;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+section.body{
+    padding: 25px 300px 0px 300px;
+}
+
+/* Start Header */
+header{
+    display: grid;
+    grid-template-columns: 300px 500px 100px;
+    column-gap: 100px;
+}
+
+header .logo{
+    list-style: none;
+}
+
+header ul{
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 50px 50px;
+    list-style: none;
+    padding: 0px;
+}
+
+header li {
+    text-decoration: none;
+    margin: 0px;
+    color: black;
+    font-size: 25px;
+    font-family: Monaco,  Monospace;
+}
+
+header .logo img{
+    width: 33px;
+    margin-right: 5px;
+}
+
+header nav {
+    padding-top: 5px;
+    display: grid;
+    grid-template-columns: 70px 70px 100px 100px 100px 100px;
+}
+
+header nav a{
+    color: black;
+    font-family: sans-serif;
+}
+
+header nav a:hover{
+    color: grey;
+    cursor: pointer;
+    text-decoration: none;
+    transition-duration: 1s;
+}
+
+header #search{
+    margin-top: 5px;
+    width: 20px;
+}
+
+/* Ender Header */
+
+/* Start Banner of Post */
+
+.post_img{
+    width: 1050px;
+    height: 600px;
+    border-radius: 10px;
+    margin: 30px 0px;
+
+}
+
+div.banner{
+    padding: 50px 0px;
+}
+
+img.my-img{
+    width: 900px;
+}
+
+.about_me{
+    width: 650px;
+    margin: 50px 150px;
+    line-height: 1.6;
+}
+/* Footer Start */
+footer{
+    padding: 70px 300px 100px 300px;
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns:  350px  350px 350px;
+    column-gap: 18.5px;
+    background-color: white;
+}
+
+footer .footer_about h1, p{
+    font-family: sans-serif;
+    margin: 3px;
+}
+
+footer .social_media ul, .social_tech ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns:  50px  50px 50px;
+    column-gap: 18.5px;
+}
+
+footer .social_media ul img, .social_tech ul img{
+    width: 25px;
+}
+
+/* Footer End */
